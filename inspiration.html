@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>inspiration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+
+	<style>
+		/* Basic Styles */
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+
+		/* Navigation Styles */
+		nav {
+			background-color: #333;
+			overflow: hidden;
+			position: sticky;
+			top: 0;
+		}
+
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		/* Section Styles */
+		section {
+			padding: 50px;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		.heading {
+			font-size: 70px;
+			font-weight: 600;
+			background-image: linear-gradient(to right, #020006, #8c8c8c);
+			color: transparent;
+			background-clip: text;
+			-webkit-background-clip: text;
+		}
+
+		/* Column Styles */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 4px;
+			justify-content: space-between;
+			margin: 0 -4px;
+		}
+
+		.column {
+			flex: 32.6%;
+			max-width: 32.6%;
+			padding: 0 4px;
+			margin-bottom: 20px;
+		}
+
+		.column img {
+			width: 100%;
+			height: auto;
+			cursor: pointer;
+		}
+
+		.column button {
+			background-color: grey;
+			color: white;
+			box-shadow: 10px 4px 20px rgb(38, 38, 38);
+			margin-left: 2%;
+			font-size: larger;
+			width: 80px;
+			height: 50px;
+			border-radius: 20%;
+
+		}
+
+
+		/* Media Queries */
+		@media screen and (max-width: 768px) {
+			.column {
+				flex: 100%;
+				max-width: 100%;
+			}
+		}
+
+		/* MERITS AND DEMERITS SECTION */
+		.music-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.music-box {
+			width: 48%;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 20px;
+			box-sizing: border-box;
+		}
+
+		.music-merits {
+			background-color: #e0ffe0;
+			box-shadow: 10px 4px 20px rgb(122, 240, 255);
+		}
+
+		.music-demerits {
+			background-color: #ffe0e0;
+			box-shadow: 10px 4px 20px rgb(255, 122, 197);
+		}
+
+		.music-box h2 {
+			font-size: 4vh;
+
+		}
+
+		.music-box ul li {
+			margin-top: 10px;
+			font-size: 2.5vh;
+
+		}
+
+		@media screen and (max-width: 768px) {
+			.music-section {
+				flex-direction: column;
+			}
+
+			.music-merits,
+			.music-demerits {
+				width: 100%;
+				margin-top: 5%;
+			}
+		}
+
+		/* footer  */
+		.aboutme {
+			background-color: rgb(54, 54, 54);
+			color: white;
+			box-shadow: 10px 4px 20px rgb(21, 18, 18);
+			padding: 2%;
+		}
+
+		footer {
+			background-color: #f2f2f2;
+			color: #000000;
+			padding: 20px 0;
+			text-align: center;
+		}
+
+		.footer-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+
+
+		.social-container {
+			flex-basis: 70%;
+			display: flex;
+			justify-content: space-evenly;
+			margin: 20px 0;
+		}
+
+		.social-container a {
+			font-size: 1.5em;
+			color: #777;
+			transition: color 0.2s;
+		}
+
+		.social-container a:hover {
+			color: #333;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.footer-container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+
+
+			.social-container {
+				flex-basis: 100%;
+
+			}
+
+			.social-container a {
+				font-size: 1.2em;
+				margin-left: 10px;
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<!-- Navigation Bar -->
+	<nav>
+		<a href="#">Home</a>
+		<a href="#livetherapy">Live Therapy</a>
+		<a href="#md">Merits & Demerits</a>
+
+	</nav>
+
+	<!-- First Section -->
+	<section>
+		<h1 class="heading">Welcome to <span>Live</span> Therapy session</h1>
+		<p class="aboutme">When you click on the "Start" button, the music therapy session would begin and the music would start
+			playing.
+
+			If you click on the "Pause" button, the music would stop playing and the timer would pause. This would allow
+			you to take a break from the therapy session or pause it for any other reason. When you're ready to resume
+			the session, you could click the "Pause" button again to start the music and timer back up.</p>
+	</section>
+
+	<!-- Second Section -->
+	<section>
+		<div id="livetherapy" class="row">
+			<div class="column">
+				<img src="relaximg1.avif" alt="Song 1"><button onclick="playSong('relaxmusic1.mp3')">PLAY
+				</button>&nbsp;<button onclick="pauseSong('smoke-143172')">PAUSE</button>
+			</div>
+			<div class="column">
+				<img src="relaximg2.avif" alt="Song 1"> <button onclick="playSong('relaxmusic2.mp3')">PLAY
+				</button>&nbsp;<button onclick="pauseSong('smoke-143172')">PAUSE</button>
+			</div>
+			<div class="column">
+				<img src="relaximg3.avif" alt="Song 1"><BR><BR><BR><button onclick="playSong('relaxmusic3.mp3')">PLAY
+				</button>&nbsp;<button onclick="pauseSong('smoke-143172')">PAUSE</button>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h1 id="md" class="aboutme">Merits And Demerits</h1>
+	</section>
+	<section class="music-section">
+		<div class="music-box music-merits">
+			<h2>Inspiration Therapy Merits</h2>
+			<ul>
+				<li>Helps boost motivation and inspiration</li>
+				<li>Can improve focus and concentration</li>
+				<li>May aid in better productivity</li>
+			</ul>
+		</div>
+		<div class="music-box music-demerits">
+			<h2>Inspiration Therapy Demerits</h2>
+			<ul>
+				<li>May not be effective for everyone</li>
+				<li>Can be overwhelming for some people</li>
+				<li>Some people may find it distracting or unhelpful</li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<h1 class="aboutme">About me</h1>
+	</section>
+	<footer>
+		<div class="footer-container">
+			<div class="contact">
+				<h4>My name is ANKIT NARANG , I am pursing B.tech in CSE for any query contact me </h4>
+			</div>
+			<div class="social-container">
+				<a href="https://www.linkedin.com/in/ankit-narang-aba6301b0/"><i class="fab fa-linkedin"></i></a>
+				<a href="https://cxi-miet.github.io/Frontend-Showdown/"><i class="fas fa-globe"></i></a>
+				<a href="https://www.instagram.com/ankit.narang_07/?hl=en"><i class="fab fa-instagram"></i></a>
+				<a href="https://github.com/ankitnarang-ai"><i class="fab fa-github"></i></a>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+	<!-- Script to play song on click -->
+	<script>
+		var audio;
+		function playSong(song) {
+			if (audio) audio.pause(); // pause currently playing audio (if any)
+			audio = new Audio(song);
+			audio.play();
+		}
+		function pauseSong() {
+			if (audio) audio.pause(); // pause currently playing audio (if any)
+		}
+	</script>
+
+</body>
+
+</html>
