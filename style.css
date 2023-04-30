@@ -54,6 +54,9 @@ nav ul li a {
   border-radius: 3px;
   text-transform: uppercase;
 }
+nav ul li a:hover{
+  background-color: #676767;
+}
 
 a.active,
 a:hover {
